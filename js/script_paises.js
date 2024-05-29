@@ -1,0 +1,97 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const tableName = 'T_Paises';  // Cambia esto según la tabla que necesites consultar
+
+    fetch('https://us-central1-agritecgeo-analytics.cloudfunctions.net/crm-agritecgeo-query', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ table: tableName })  // Enviar el nombre de la tabla como parte del cuerpo de la solicitud
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Respuesta de red no fue ok');
+        }
+        return response.json();
+    })
+    .then(data => mostrarPaises(data))
+    .catch(error => console.error('Error al cargar los clientes:', error));
+});
+
+function mostrarPaises(paises) {
+    const tbody = document.querySelector('#tablaPaises tbody');
+    tbody.innerHTML = ''; // Este es el punto crítico
+
+    paises.forEach(cliente => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+            <td>${cliente.Cod_Pais}</td>
+            <td>${cliente.Nombre_Pais}</td>
+        `;
+        tbody.appendChild(fila);
+    });
+}
+
+
+function agregarCategoria(nombre, codigo) {
+    fetch('https://us-central1-agritecgeo-analytics.cloudfunctions.net/crm-agritecgeo-add-countries', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({Cod_Pais: nombre, 
+                            Nombre_Pais: codigo,
+                            tabla:  "T_Paises"
+                            })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Respuesta de red no fue ok. Estado HTTP: ' + response.status);
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.error) {
+            Swal.fire({
+                title: 'Error!',
+                text: data.error,
+                icon: 'error',
+                confirmButtonColor: '#d33',
+                confirmButtonText: 'OK'
+            });
+        } else {
+            mostrarMensajeAgregado();
+        }
+    })
+    .catch(error => console.error('Error al agregar la categoría:', error));
+}
+
+function mostrarMensajeAgregado() {
+    Swal.fire({
+        title: 'Éxito!',
+        text: 'El país ha sido agregada correctamente.',
+        icon: 'success',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'OK'
+    });
+}
+
+
+function validarYAgregarCategoria() {
+    var nombre = document.getElementById('nombre').value.trim();
+    var codigo = document.getElementById('descripcion').value.trim();
+
+    if (nombre === "" || codigo === "") {
+        Swal.fire({
+            title: 'Error!',
+            text: 'Todos los campos deben ser llenados.',
+            icon: 'error',
+            confirmButtonColor: '#d33',
+            confirmButtonText: 'OK'
+        });
+        return;
+    }
+
+    // Luego de la validación, agregar la categoría si todo está correcto
+    agregarCategoria(nombre, codigo);
+}

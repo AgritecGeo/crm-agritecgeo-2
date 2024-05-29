@@ -1,0 +1,80 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Clientes - AgritecGEO®</title>
+    <style>
+        body {
+            background-image: url('https://filedn.com/lRAMUKU4tN3HUnQqI5npg4H/Imagenes/agricultura2.png'); /* Asegúrate de cambiar la ruta */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <link rel="stylesheet" href="/styles/design.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+</head>
+
+
+<body>
+    <div id="banner">
+    <center>
+        <img src="https://filedn.com/lRAMUKU4tN3HUnQqI5npg4H/Imagenes/agritecgeo_logo.png" alt="Banner AgritecGEO®">
+    </center>
+    </div>
+    <h1>Lista de Clientes - AgritecGEO®</h1>
+    <div class="table-container" style="height: 450px; overflow-y: auto;">
+        <table id="tablaClientes">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre Cliente</th>
+                    <th>Codigo SAP</th>
+                    <th>Razon Social</th>
+                    <th>NIT</th>
+                    <th>Direccion Fiscal</th>
+                    <th>Telefono oficina</th>
+                    <th>Contacto</th>
+                    <th>Puesto</th>
+                    <th>Email</th>
+                    <th>Celular</th>
+                    <th>Codigo Pais</th>
+                    <th>Codigo RTC UO</th>
+                    <th>Codigo RTC SAA</th>
+                    <th>Segmento 1</th>
+                    <th>Segmento 2</th>
+                    <th>isInforme</th>
+                    <th>isBesafer</th>
+                    <th>Codigo categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los datos de los clientes se cargarán aquí -->
+            </tbody>
+        </table>
+        
+    </div>
+    <div class="buttons">
+        <button onclick="window.location.href='editar_cliente.html';">Editar cliente</button>
+        <button onclick="window.location.href='agregar_cliente.html';">Ingreso de nuevo cliente</button>
+    </div>
+
+    <h1>Mantenimiento de Tablas</h1>
+    
+    <center><div>
+        <button onclick="window.location.href='categorias.html';">Categorías</button>
+        <button onclick="window.location.href='paises.html';">Países</button>
+        <button onclick="window.location.href='rtc_saa.html';">RTC SAA</button>
+        <button onclick="window.location.href='rtc_uo.html';">RTC UO</button>
+        <button onclick="window.location.href='segmento_n1.html';">SEGMENTO N1</button>
+        <button onclick="window.location.href='segmento_n2.html';">SEGMENTO N2</button>
+        <button onclick="window.location.href='acuerdos.html';">Acuerdos</button>
+        <button onclick="window.location.href='organizaciones.html';">Organizaciones AgritecGEO®</button>
+    </div></center>
+
+    <script src="/js/script.js"></script>
+        
+</body>
+</html>

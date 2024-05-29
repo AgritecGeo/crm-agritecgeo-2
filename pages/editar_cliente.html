@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingreso de Información</title>
+    <style>
+        body {
+            background-image: url('https://filedn.com/lRAMUKU4tN3HUnQqI5npg4H/Imagenes/agricultura2.png'); /* Asegúrate de cambiar la ruta */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <link rel="stylesheet" href="/styles/style_editar_cliente.css">
+</head>
+<body>
+    <h1>Ingreso de Información de Clientes</h1>
+    <div id="buscador-container">
+        <label for="buscador">Buscar Cliente por ID Hash:</label>
+        <input type="text" id="buscador" name="buscador" placeholder="Ingrese ID Hash">
+        <button type="submit" id="buscador_id" name="buscador_id" onclick="buscarCliente()">Buscar</button>
+    </div>
+    <form id="formularioCliente">
+        <div>
+            <label for="nombreCliente">Nombre Cliente:</label>
+            <input type="text" id="nombreCliente" name="nombreCliente" required>
+        </div>
+        <div>
+            <label for="codigoSAP">Código SAP:</label>
+            <input type="text" id="codigoSAP" name="codigoSAP">
+        </div>
+        <div>
+            <label for="razonSocial">Razón Social:</label>
+            <input type="text" id="razonSocial" name="razonSocial">
+        </div>
+        <div>
+            <label for="nit">NIT:</label>
+            <input type="text" id="nit" name="nit">
+        </div>
+        <div>
+            <label for="direccionFiscal">Dirección Fiscal:</label>
+            <input type="text" id="direccionFiscal" name="direccionFiscal">
+        </div>
+        <div>
+            <label for="telefonoOficina">Teléfono Oficina:</label>
+            <input type="text" id="telefonoOficina" name="telefonoOficina">
+        </div>
+        <div>
+            <label for="contacto">Contacto:</label>
+            <input type="text" id="contacto" name="contacto">
+        </div>
+        <div>
+            <label for="puesto">Puesto:</label>
+            <input type="text" id="puesto" name="puesto">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="celular">Celular:</label>
+            <input type="text" id="celular" name="celular">
+        </div>
+        <div>
+            <label for="codigoPais">Código País:</label>
+            <input type="text" id="codigoPais" name="codigoPais">
+        </div>
+        <div>
+            <label for="codigoRTC_UO">Código RTC UO:</label>
+            <input type="text" id="codigoRTC_UO" name="codigoRTC_UO">
+        </div>
+        <div>
+            <label for="codigoRTC_SAA">Código RTC SAA:</label>
+            <input type="text" id="codigoRTC_SAA" name="codigoRTC_SAA">
+        </div>
+        <div>
+            <label for="segmento1">Segmento 1:</label>
+            <input type="text" id="segmento1" name="segmento1">
+        </div>
+        <div>
+            <label for="segmento2">Segmento 2:</label>
+            <input type="text" id="segmento2" name="segmento2">
+        </div>
+        <div>
+            <label for="isInforme">Is Informe:</label>
+            <input type="text" id="isInforme" name="isInforme">
+        </div>
+        <div>
+            <label for="isBesafer">Is Besafer:</label>
+            <input type="text" id="isBesafer" name="isBesafer">
+        </div>
+        <div>
+            <label for="codigoCategoria">Código Categoría:</label>
+            <input type="text" id="codigoCategoria" name="codigoCategoria">
+        </div>
+    </form>
+
+    <h1>Actualización de Cliente</h1>
+
+    <form id="formularioCliente_edit">
+            <div>
+                <label for="nombreCliente">Nombre Cliente:</label>
+                <input type="text" id="nombreCliente_add" name="nombreCliente_add" required>
+            </div>
+            <div>
+                <label for="codigoSAP">Código SAP:</label>
+                <select id="codigoSAP_add" name="codigoSAP_add"></select>
+            </div>
+            <div>
+                <label for="razonSocial">Razón Social:</label>
+                <input type="text" id="razonSocial_add" name="razonSocial_add">
+            </div>
+            <div>
+                <label for="nit">NIT:</label>
+                <input type="text" id="nit_add" name="nit_add">
+            </div>
+            <div>
+                <label for="direccionFiscal">Dirección Fiscal:</label>
+                <input type="text" id="direccionFiscal_add" name="direccionFiscal_add">
+            </div>
+            <div>
+                <label for="telefonoOficina">Teléfono Oficina:</label>
+                <input type="text" id="telefonoOficina_add" name="telefonoOficina_add">
+            </div>
+            <div>
+                <label for="contacto">Contacto:</label>
+                <input type="text" id="contacto_add" name="contacto_add">
+            </div>
+            <div>
+                <label for="puesto">Puesto:</label>
+                <input type="text" id="puesto_add" name="puesto_add">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email_add" name="email_add">
+            </div>
+            <div>
+                <label for="celular">Celular:</label>
+                <input type="text" id="celular_add" name="celular_add">
+            </div>
+
+            <div>
+                <label for="codigoPais">País:</label>
+                <select id="codigoPais_add" name="codigoPais_add"></select>
+            </div>
+            <div>
+                <label for="codigoPais_text">Código Pais:</label>
+                <input type="text" id="codigoPais_text" name="codigoPais_text">
+            </div>
+
+            <div>
+                <label for="codigoRTC_UO">RTC UO:</label>
+                <select id="codigoRTC_UO_add" name="codigoRTC_UO_add"></select>
+            </div>
+            <div>
+                <label for="codigoRTC_UO_text">Código RTC UO:</label>
+                <input type="text" id="codigoRTC_UO_text" name="codigoRTC_UO_text">
+            </div>
+
+            <div>
+                <label for="codigoRTC_SAA">RTC SAA:</label>
+                <select id="codigoRTC_SAA_add" name="codigoRTC_SAA_add"></select>
+            </div>
+            <div>
+                <label for="codigoRTC_SAA_text">Código RTC SAA:</label>
+                <input type="text" id="codigoRTC_SAA_text" name="codigoRTC_SAA_text">
+            </div>
+
+            <div>
+                <label for="segmento1">Segmento 1:</label>
+                <select id="segmento1_add" name="segmento1_add"></select>
+            </div>
+            <div>
+                <label for="segmento1_text">Codigo Segmento 2:</label>
+                <input type="text" id="segmento1_text" name="segmento1_text">
+            </div>
+
+            <div>
+                <label for="segmento2">Segmento 2:</label>
+                <select id="segmento2_add" name="segmento2_add"></select>
+            </div>
+            <div>
+                <label for="segmento2_text">Codigo Segmento 2:</label>
+                <input type="text" id="segmento2_text" name="segmento2_text">
+            </div>
+
+            <div>
+                <label for="orgTrimble">Organización Trimble:</label>
+                <select id="orgTrimble_add" name="orgTrimble_add"></select>
+            </div>
+            <div>
+                <label for="org_id_display">ID Organización:</label>
+                <input type="text" id="org_id_display_add" name="org_id_display_add">
+            </div>
+
+            <div>
+                <label for="codigoCategoria">Categoria:</label>
+                <select id="codigoCategoria_add" name="codigoCategoria_add"></select>
+            </div>
+            <div>
+                <label for="codigoCategoria_text">Código Categoria:</label>
+                <input type="text" id="codigoCategoria_text" name="codigoCategoria_text">
+            </div>
+
+            <div>
+                <label for="acuerdo">Acuerdo:</label>
+                <select id="acuerdo_add" name="acuerdo_add"></select>
+            </div>
+            <button type="submit" onclick="enviarFormulario(event)">Enviar</button>
+    </form>
+
+    <script src="/js/script_editar_cliente.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

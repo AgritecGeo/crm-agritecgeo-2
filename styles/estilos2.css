@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+.form-container {
+    width: 75%; /* Ajusta el ancho del contenedor a 75% del ancho de la pantalla */
+    max-width: 800px; /* Máximo ancho del formulario */
+    margin: 20px auto; /* Centrado y con margen */
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Ajusta los campos de entrada, select y buttons para que no superen el ancho del contenedor */
+input[type="text"], input[type="email"], select, textarea, button {
+    width: 100%; /* Hace que ocupen el 100% del contenedor form, no más allá */
+    padding: 8px;
+    margin: 6px 0 10px;
+    display: block; /* Hace que cada elemento ocupe su propia línea */
+    box-sizing: border-box; /* Incluye el padding y borde en el ancho definido */
+}
+
+button {
+    width: auto; /* Permite que los botones sean tan anchos como su contenido, no más */
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block; /* Permite que los botones se sitúen en línea si hay espacio */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Un verde un poco más claro al pasar el mouse */
+}

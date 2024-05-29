@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingreso de Información</title>
+    <style>
+        body {
+            background-image: url('https://filedn.com/lRAMUKU4tN3HUnQqI5npg4H/Imagenes/agricultura2.png'); /* Asegúrate de cambiar la ruta */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <link rel="stylesheet" href="/styles/estilos.css">
+
+</head>
+<body>
+    <h1>Ingreso de Información de Clientes</h1>
+    <form id="formularioCliente">
+        <div>
+            <label for="nombreCliente">Nombre Cliente:</label>
+            <input type="text" id="nombreCliente" name="nombreCliente" required>
+        </div>
+        <div>
+            <label for="codigoSAP">Código SAP:</label>
+            <select type="text" id="codigoSAP" name="codigoSAP">
+        </div>
+        <div>
+            <label for="razonSocial">Razón Social:</label>
+            <input type="text" id="razonSocial" name="razonSocial">
+        </div>
+        <div>
+            <label for="nit">NIT:</label>
+            <input type="text" id="nit" name="nit">
+        </div>
+        <div>
+            <label for="direccionFiscal">Dirección Fiscal:</label>
+            <input type="text" id="direccionFiscal" name="direccionFiscal">
+        </div>
+        <div>
+            <label for="telefonoOficina">Teléfono Oficina:</label>
+            <input type="text" id="telefonoOficina" name="telefonoOficina">
+        </div>
+        <div>
+            <label for="contacto">Contacto:</label>
+            <input type="text" id="contacto" name="contacto">
+        </div>
+        <div>
+            <label for="puesto">Puesto:</label>
+            <input type="text" id="puesto" name="puesto">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="celular">Celular:</label>
+            <input type="text" id="celular" name="celular">
+        </div>
+        <div>
+            <label for="codigoPais">Código País:</label>
+            <select id="codigoPais" name="codigoPais"></select>
+        </div>
+        <div>
+            <label for="codigoRTC_UO">Código RTC UO:</label>
+            <select id="codigoRTC_UO" name="codigoRTC_UO"></select>
+        </div>
+        <div>
+            <label for="codigoRTC_SAA">Código RTC SAA:</label>
+            <select id="codigoRTC_SAA" name="codigoRTC_SAA"></select>
+        </div>
+        <div>
+            <label for="segmento1">Segmento 1:</label>
+            <select id="segmento1" name="segmento1"></select>
+        </div>
+        <div>
+            <label for="segmento2">Segmento 2:</label>
+            <select id="segmento2" name="segmento2"></select>
+        </div>
+        <div>
+            <label for="orgTrimble">Organización Trimble:</label>
+            <select id="orgTrimble" name="orgTrimble"></select>
+        </div>
+        <div>
+            <label for="org_id_display">ID Organización:</label>
+            <input type="text" id="org_id_display" name="org_id_display"></input>
+        </div>
+        <div>
+            <label for="acuerdo">Acuerdo:</label>
+            <select id="acuerdo" name="acuerdo"></select>
+        </div>
+        <div>
+            <button type="submit" onclick="mostrarMensajeAgregado()">Enviar</button>
+        </div>
+    </form>
+
+    
+    <script src="/js/script_agregar_cliente.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

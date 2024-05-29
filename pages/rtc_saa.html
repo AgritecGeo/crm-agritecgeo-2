@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mantenimiento de RTC SAA</title>
+    <style>
+        body {
+            background-image: url('https://filedn.com/lRAMUKU4tN3HUnQqI5npg4H/Imagenes/agricultura2.png'); /* Asegúrate de cambiar la ruta */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <link rel="stylesheet" href="/styles/estilos.css">
+</head>
+<center>
+    <img src="https://filedn.com/lRAMUKU4tN3HUnQqI5npg4H/Imagenes/agritecgeo_logo.png" alt="Banner AgritecGEO®" style="width: 500px;">
+</center>
+<body>
+    <h1>Mantenimiento de RTC SAA</h1>
+    <table id="tablaRTC_SAA">
+        <thead>
+            <tr>
+                <th>Nombre_RTC_SAA</th>
+                <th>Codigo_RTC_SAA</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+
+        </tbody>
+    </table>
+
+    <div class="form-container">
+        <form action="agregar_registro.php" method="post">
+            <h2>Agregar nuevo RTC SAA</h2>
+            <label for="nombre">Nombre_RTC_SAA:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="descripcion">Codigo_RTC_SAA:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea><br><br>
+            <button type="button" class="btn agregar" onclick="validarYAgregarCategoria()">Agregar Registro</button>
+        </form>
+    </div>
+    <script src="/js/script_rtc_saa.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
